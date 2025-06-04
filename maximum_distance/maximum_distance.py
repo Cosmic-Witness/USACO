@@ -1,18 +1,15 @@
-read = open('max.in','r')
+n = int(input())
+x = list(map(int, input().split()))
+y = list(map(int, input().split()))
 
-n = int(read.readline())
-x = list(map(int,read.readline().split()))
-y = list(map(int,read.readline().split()))
-max = 0
+max_dist = 0
 
 for i in range(n):
-    for j in range(i+1,n):
-        dx =  x[i] - x[j]
+    for j in range(i + 1, n):
+        dx = x[i] - x[j]
         dy = y[i] - y[j]
-
         euclid = dx * dx + dy * dy
-        if euclid > max:
-            max = euclid
+        if euclid > max_dist:
+            max_dist = euclid
 
-out = open('max.out','w')
-out.write(str(max))
+print(max_dist)
