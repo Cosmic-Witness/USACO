@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+/workspace/homework_agent/data.db
+/workspace/homework_agent/out/
